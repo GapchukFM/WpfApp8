@@ -1,0 +1,26 @@
+<Window x:Class="LoginApp.MainMenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Main Menu" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Background="LightGray">
+            <Button Content="MENU" Width="150" Height="30" Margin="5" Name="MainMenuButton" Click="MainMenuButton_Click"/>
+            <Button Content="BOOKING" Width="150" Height="30" Margin="5" Name="BookedButton" Click="BookedButton_Click"/>
+            <Button Content="EXIT" Width="150" Height="30" Margin="5" Name="ExitButton" Click="ExitButton_Click"/>
+        </StackPanel>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="10">
+            <StackPanel Name="InventoryList">
+                <StackPanel Orientation="Horizontal" Margin="5" Background="LightYellow">
+                    <Image Source="inventory1.jpg" Width="50" Height="50" Margin="5"/>
+                    <StackPanel Orientation="Vertical" Margin="5">
+                        <TextBlock Text="Description 1" FontSize="14" FontWeight="Bold"/>
+                        <TextBlock Text="Price: 500 rub." FontSize="12"/>
+                    </StackPanel>
+                    <Button Content="BOOKING" Width="120" Margin="5" VerticalAlignment="Center" Click="BookButton_Click"/>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>
